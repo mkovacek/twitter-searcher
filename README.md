@@ -9,6 +9,7 @@
 <h3>Instructions:</h3>
   <p>1. git clone https://github.com/mkovacek/twitter-searcher.git</p>
   <p>2. cd twitter-searcher</p>
-  <p>3. npm install</p>
+  <p>3. npm install (maybe will be some warnings and errors during installation node_modules, just ignore)</p>
   <p>4. bower install</p>
   <p>5. grunt serve</p>
+  <p>Grunt will open app => http://localhost:9000/</p>
