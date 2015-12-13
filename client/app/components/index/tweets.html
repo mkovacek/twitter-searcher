@@ -1,0 +1,30 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title text-center" style="color:#ffffff;">Tweets</h3>
+  </div>
+  <div class="panel-body" ng-if="lc.tweets.length===0">
+    <h4>Start searching :)</h4>
+  </div>
+  <div class="panel-body" ng-if="lc.tweets.length!=0">
+    <div class="list-group">
+      <div class="list-group-item">
+        <button class="pull-right btn btn-raised btn-default" ng-click="lc.getNewTweets()">Refresh tweets</button>
+      </div>
+      <div class="list-group-item" dir-paginate="tweet in lc.tweets | itemsPerPage: lc.pageSize track by $index" current-page="lc.currentPage">
+        <div class="row-picture">
+          <img class="circle" ng-src={{tweet.profile_img}} alt="icon">
+        </div>
+        <div class="row-content">
+          <h4 class="list-group-item-heading">{{tweet.user_name}} <small>@{{tweet.screen_name}} {{tweet.created_at}}</small></h4>
+          <h5 class="list-group-item-text" ng-bind-html="lc.highlight(tweet.text)"></h5>
+          <p>Retweets {{tweet.retweet_count}} Favorite {{tweet.favorite_count}}</p>
+        </div>
+        <hr>
+      </div>
+      <div class="text-center">
+        <dir-pagination-controls boundary-links="true" on-page-change="lc.pageChange(newPageNumber)"></dir-pagination-controls>
+      </div>
+    </div>
+  </div>
+</div>
+

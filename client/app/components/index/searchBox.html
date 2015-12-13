@@ -1,0 +1,11 @@
+<div class="col-lg-4">
+  <form class="form-horizontal" name="search" novalidate>
+      <div class="form-group col-lg-12">
+        <div class="input-group">
+          <input ng-model="lc.keywords" type="text" name="keyword" class="form-control" placeholder="Enter keyword" required>
+          <span class="input-group-btn"><button type="submit" ng-click='lc.search(search.$valid)' class="btn btn-raised btn-default">Search</button></span>
+        </div>
+        <p ng-show="search.$submitted && search.keyword.$error.required" style="color:#ffffff;"> Please enter keyword. </p>
+      </div>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+$fa-font-path: "../bower_components/font-awesome/fonts";
+@import '../bower_components/font-awesome/scss/font-awesome';
+
+/**
+ * App-wide Styles
+ */
+
+body {
+  background-color: lightgrey;
+  overflow-x: hidden;
+}
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+// Component styles are injected through grunt
+// injector
+@import 'components/index/index.scss';
+// endinjector
