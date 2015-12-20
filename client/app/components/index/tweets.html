@@ -1,6 +1,6 @@
-<div class="panel panel-info">
+<div class="well">
   <div class="panel-heading">
-    <h3 class="panel-title text-center" style="color:#ffffff;">Tweets</h3>
+    <h3 class="panel-title text-center"><b>Tweets</b></h3>
   </div>
   <div class="panel-body" ng-if="lc.tweets.length===0">
     <h4>Start searching :)</h4>
@@ -8,7 +8,7 @@
   <div class="panel-body" ng-if="lc.tweets.length!=0">
     <div class="list-group">
       <div class="list-group-item">
-        <button class="pull-right btn btn-raised btn-default" ng-click="lc.getNewTweets()">Refresh tweets</button>
+        <button class="pull-right btn btn-raised btn-info" ng-click="lc.getNewTweets()">Refresh tweets</button>
       </div>
       <div class="list-group-item" dir-paginate="tweet in lc.tweets | itemsPerPage: lc.pageSize track by $index" current-page="lc.currentPage">
         <div class="row-picture">
@@ -17,7 +17,7 @@
         <div class="row-content">
           <h4 class="list-group-item-heading">{{tweet.user_name}} <small>@{{tweet.screen_name}} {{tweet.created_at}}</small></h4>
           <h5 class="list-group-item-text" ng-bind-html="lc.highlight(tweet.text)"></h5>
-          <p>Retweets {{tweet.retweet_count}} Favorite {{tweet.favorite_count}}</p>
+          <p>Retweets <b>{{tweet.retweet_count}}</b> Favorite <b>{{tweet.favorite_count}}</b></p>
         </div>
         <hr>
       </div>
