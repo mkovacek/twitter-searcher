@@ -14,5 +14,5 @@
   <p>5. grunt serve</p>
   <p>Grunt will run app => http://localhost:9000/</p>
 <br>
-<img src="https://res.cloudinary.com/dffww0cvc/image/upload/v1450614780/Screenshot_1_u0czbe.jpg"><br>
-<img src="https://res.cloudinary.com/dffww0cvc/image/upload/v1450614784/Screenshot_2_npfaoa.jpg">
+<img src="https://res.cloudinary.com/dffww0cvc/image/upload/v1450615042/Screenshot_5_lw4z6u.jpg">
+<img src="https://res.cloudinary.com/dffww0cvc/image/upload/v1450615038/Screenshot_4_zgjgl2.jpg">
